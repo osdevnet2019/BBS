@@ -1,0 +1,30 @@
+This will create a file with one byte 'A', then a hole, then another byte 'B'. Look at the size of the resulting file (measured in 512-byte sectors):
+
+% ./mkhole 1
+The file AB has size 2 and takes 2 sectors
+% ./mkhole 1023
+The file AB has size 1024 and takes 2 sectors
+% ./mkhole 1024
+The file AB has size 1025 and takes 4 sectors
+% ./mkhole 12287
+The file AB has size 12288 and takes 4 sectors
+% ./mkhole 12288
+The file AB has size 12289 and takes 6 sectors
+% ./mkhole 274431
+The file AB has size 274432 and takes 6 sectors
+% ./mkhole 274432
+The file AB has size 274433 and takes 8 sectors
+% ./mkhole 67383295
+The file AB has size 67383296 and takes 8 sectors
+% ./mkhole 67383296
+The file AB has size 67383297 and takes 10 sectors
+% ./mkhole 2147483646
+The file AB has size 2147483647 and takes 10 sectors
+% ls -l AB
+-rw-r--r--    1 aeb      users    2147483647 Sep 28 21:51 AB
+% du AB
+5       AB
+% ./mkhole 2147483647
+File size limit exceeded
+
+Apparently this filesystem uses 1024-byte blocks, and has a maximum file size 2147483647. The file of this maximum size, but with a giant hole, takes 5 blocks.

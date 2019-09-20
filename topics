@@ -1,0 +1,74 @@
+sed descendant of ed.
+*** funtoo | gentoo with gui & kernel compilation ***
+
+or LFS (linux from scratch)
+
+HCI
+commandline/gui
+
+terminals.
+character encodings.
+keyboards.
+
+building staff.
+make, makefile, project dependencies.
+
+
+what is the operating system?
+POSIX
+kernel.
+GNU libc / some basic libs + headers + utilities.
+compiler/debugger/editor....
+
+boot loader.
+
+start the system. stop the system.
+managing the services (what service?)
+initialization of drivers and devices.
+time.
+logging.
+
+event processing: inotify...
+
+
+make the system sleep.
+
+how do we install/deinstall software.
+package management.
+source compilations.
+
+gui
+framebuffer , X, Wayland.
+
+
+
+memory.
+to allocate/dealloc
+distribute between processes.
+(its security)
+Address Space Randomization
+we need to protect the stack.
+....
+....
+storage.
+filesystems. (its securityi (traditional and ACLs)
+
+processes, threads (scheduling, priorities).
+process security (sandboxing, per process permissions, limits, process groups to manage...)
+alternatives to "classical theading" with shared memory.
+thread classical problems:
+* dining philosophers  ---dijkstra
+* monitors  --- tony hoar
+* sleeping barber  ---- dijkstra
+how can we go lock free? (and when?)
+IPC.
+message bus.
+semaphores, mutex
+signals
+pipes
+sockets
+
+networking
+its security (on different levels)
+
+
