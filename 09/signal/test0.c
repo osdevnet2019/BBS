@@ -8,6 +8,9 @@ void sigint(int a)
 int main()
 {
     signal(SIGINT, sigint);
-    while (1) {};
+    while (1) {
+	    //printf ("aaa\n");
+
+	};
     return 0;
 }

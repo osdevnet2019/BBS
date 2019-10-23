@@ -9,6 +9,6 @@ int init_module(void)
 
 void cleanup_module(void)
 {
-    printk(KERN_INFO "bye world\n");
+    printk("bye world\n");
 
 }
