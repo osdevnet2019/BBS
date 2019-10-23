@@ -47,7 +47,14 @@ in order to execute a given program.
             |
             |
             |
-
+        was exec family function
+        able to run the other
+        process?
+ yes |                       | no
+     |                       |
+     |                print an error
+     |                       |
+             child exits.
 ```
 
 * You need to provide a makefile. This will be especially useful, if you would have several output object files, and would link those together. We will compile the program by changing to the directory with your github username and typing "make".
