@@ -52,8 +52,9 @@ main()
      * we put there.
      */
     while (*shm != '*')
-        sleep(1);
-
+	{
+       //sleep(1);
+    }
     exit(0);
 }
 
